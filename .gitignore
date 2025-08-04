@@ -212,3 +212,4 @@ notebooks/IMDB.csv
 atlas/
 local_s3
 data/
+models/
