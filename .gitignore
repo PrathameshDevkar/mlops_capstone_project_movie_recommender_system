@@ -210,3 +210,5 @@ mlruns/
 notebooks/data.csv
 notebooks/IMDB.csv
 atlas/
+local_s3
+data/
