@@ -73,6 +73,7 @@ def register_model(model_name: str, model_info: dict):
         raise
 
 def main():
+    #asfafhadjmcdjuiha
     try:
         model_info_path = 'reports/experiment_info.json'
         model_info = load_model_info(model_info_path)
