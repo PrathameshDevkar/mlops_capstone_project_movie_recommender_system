@@ -26,7 +26,7 @@ warnings.filterwarnings("ignore")
 
 # ========================== CONFIGURATION ==========================
 CONFIG = {
-    "data_path": "notebooks/data.csv",
+    "data_path": "data/data.csv",
     "test_size": 0.2,
     "mlflow_tracking_uri": "https://dagshub.com/PrathameshDevkar/mlops_capstone_project_movie_recommender_system.mlflow",
     "dagshub_repo_owner": "PrathameshDevkar",
@@ -136,11 +136,11 @@ def train_and_evaluate(df):
                         mlflow.log_metrics(metrics)
 
                         # Log model
-                        # mlflow.sklearn.log_model(model, "model")
-                        # input_example = X_test[:5] if not scipy.sparse.issparse(X_test) else X_test[:5].toarray()
-                        # mlflow.sklearn.log_model(model, "model", input_example=input_example)
-                        joblib.dump(model,"model_exp_2.pkl")
-                        mlflow.log_artifact("model_exp_2.pkl",artifact_path='model')
+                        mlflow.sklearn.log_model(model, "model")
+                        input_example = X_test[:5] if not scipy.sparse.issparse(X_test) else X_test[:5].toarray()
+                        mlflow.sklearn.log_model(model, "model", input_example=input_example)
+                        # joblib.dump(model,"model_exp_2.pkl")
+                        # mlflow.log_artifact("model_exp_2.pkl",artifact_path='model')
                         # Print results for verification
                         print(f"\nAlgorithm: {algo_name}, Vectorizer: {vec_name}")
                         print(f"Metrics: {metrics}")
