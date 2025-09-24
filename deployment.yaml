@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: flask-app
-        image: 290075658813.dkr.ecr.us-east-1.amazonaws.com/flask-app:latest
+        image: 290075658813.dkr.ecr.us-east-1.amazonaws.com/capstone-project:latest
         ports:
         - containerPort: 5000
         resources:
